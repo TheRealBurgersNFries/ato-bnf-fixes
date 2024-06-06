@@ -6,6 +6,7 @@
     "factorio_version": "1.1",
     "description": "Burgers Personal mod fixes for ATO to customize it to his liking",
     "dependencies": [
-        "all-the-overhaul-modpack >= 1.8.13"
+        "all-the-overhaul-modpack >= 1.8.14",
+        "se-space-trains"
     ]
 }
