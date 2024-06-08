@@ -1,12 +1,12 @@
 {
     "name": "ato-bnf-fixes",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "title": "Burgers ATO Fixes",
     "author": "BurgersNFries",
     "factorio_version": "1.1",
     "description": "Burgers Personal mod fixes for ATO to customize it to his liking",
     "dependencies": [
-        "all-the-overhaul-modpack >= 1.8.14",
+        "all-the-overhaul-modpack >= 1.8.13",
         "se-space-trains"
     ]
 }
