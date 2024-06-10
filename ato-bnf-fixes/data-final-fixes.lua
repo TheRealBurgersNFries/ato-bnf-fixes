@@ -23,6 +23,8 @@ Recipe("el_ceramic_recipe").allowProductivity()
 Recipe("el_ceramic_1_recipe").allowProductivity()
 Recipe("el_ALK_recipe").allowProductivity()
 Recipe("el_desulfurized_kerosene_recipe").allowProductivity()
+Recipe("el_train_fuel_diesel_recipe").allowProductivity()
+Recipe("el_train_fuel_diesel_energized_recipe").allowProductivity()
 
 -- Add Productivity to BrassTacks Intermediates
 Recipe("skyseeker-armature").allowProductivity()
