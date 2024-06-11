@@ -8,15 +8,15 @@ Recipe("hcp-circuit").allowProductivity()
 Recipe("hcp-board").allowProductivity()
 Recipe("pcb-recipe").allowProductivity()
 Recipe("carbon-fiber").allowProductivity()
-Recipe("fi_materials_natural_fiber_recipe").allowProductivity()
-Recipe("fi_materials_glass_fiber_recipe").allowProductivity()
+Recipe("fi_natural_fiber_recipe").allowProductivity()
+Recipe("fi_glass_fiber_recipe").allowProductivity()
 Recipe("fu_carbon_fiber_recipe").allowProductivity()
 Recipe("fu_KFK_recipe").allowProductivity()
 Recipe("fi_GFK_recipe").allowProductivity()
 Recipe("fi_NFK_recipe").allowProductivity()
 Recipe("el_lithium_battery_recipe").allowProductivity()
 Recipe("fi_cast_glass_recipe").allowProductivity()
-Recipe("fie_arc_glass_recipe").allowProductivity()
+Recipe("fi_arc_glass_recipe").allowProductivity()
 Recipe("el_kerosene_recipe").allowProductivity()
 Recipe("el_kerosene_basic_recipe").allowProductivity()
 Recipe("el_ceramic_recipe").allowProductivity()
@@ -63,3 +63,25 @@ Recipe("spring").allowProductivity()
 
 -- Add productivity to Chemistry4You
 Recipe("lithium-hydroxide").allowProductivity()
+
+-- Fix Category for Fuel from 248k
+Recipe("fi_solid_1_recipe").changeCategory("fuel-refinery")
+Recipe("fi_solid_2_recipe").changeCategory("fuel-refinery")
+Recipe("fi_rocket_fuel_1_recipe").changeCategory("fuel-refinery")
+Recipe("fi_rocket_fuel_2_recipe").changeCategory("fuel-refinery")
+
+-- Add Iron plate and seal to Rocket Fuel from 248k
+Recipe("fi_rocket_fuel_1_recipe").addIngredient("iron-plate", 1)
+Recipe("fi_rocket_fuel_1_recipe").addIngredient("airtight-seal", 1)
+Recipe("fi_rocket_fuel_2_recipe").addIngredient("iron-plate", 1)
+Recipe("fi_rocket_fuel_2_recipe").addIngredient("airtight-seal", 1)
+
+-- Fix Category for Rocket Fuel from Chemistry4You
+Recipe("hydrogen-peroxide-rocket-fuel").changeCategory("fuel-refinery", 1)
+Recipe("nitrous-oxide-rocket-fuel").changeCategory("fuel-refinery", 1)
+
+--Add Iron plate and seal to Rocket Fuel from Chemistry4You
+Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("airtight-seal", 1)
+Recipe("nitrous-oxide-rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)

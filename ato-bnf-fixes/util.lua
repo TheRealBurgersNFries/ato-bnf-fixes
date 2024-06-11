@@ -53,7 +53,6 @@ function Recipe(value)
                     or data.raw.fluid[ingredientName] and "fluid"
                     or nil
             if not ingredientType then
-                atom.util.log.error("Unknown ingredient: " .. ingredientName)
                 return
             end
             local function apply(ingredients, amount)
@@ -201,6 +200,16 @@ function Recipe(value)
                 end
             end
             table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
+        end,
+
+        -- Change Category of a recipe
+        -- @param categry string
+        changeCategory = function(new_category)
+            if not new_category then
+                return
+            end
+
+            recipe.category = new_category
         end,
     }
 end

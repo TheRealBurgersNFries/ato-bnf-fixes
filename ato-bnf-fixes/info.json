@@ -1,6 +1,6 @@
 {
     "name": "ato-bnf-fixes",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "title": "Burgers ATO Fixes",
     "author": "BurgersNFries",
     "factorio_version": "1.1",
@@ -16,6 +16,7 @@
         "MDbobelectronics",
         "LasingAround",
         "IntermediatesForYou",
-        "ChemistryForYou"
+        "ChemistryForYou",
+        "Krastorio2"
     ]
 }
