@@ -69,6 +69,9 @@ Recipe("fi_solid_1_recipe").changeCategory("fuel-refinery")
 Recipe("fi_solid_2_recipe").changeCategory("fuel-refinery")
 Recipe("fi_rocket_fuel_1_recipe").changeCategory("fuel-refinery")
 Recipe("fi_rocket_fuel_2_recipe").changeCategory("fuel-refinery")
+Recipe("el_train_fuel_diesel_recipe").changeCategory("fuel-refinery")
+Recipe("el_train_fuel_diesel_energized_recipe").changeCategory("fuel-refinery")
+Recipe("fi_fuel_train_crystal_recipe").changeCategory("fuel-refinery")
 
 -- Add Iron plate and seal to Rocket Fuel from 248k
 Recipe("fi_rocket_fuel_1_recipe").addIngredient("iron-plate", 1)
