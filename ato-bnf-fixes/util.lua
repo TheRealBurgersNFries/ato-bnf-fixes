@@ -203,13 +203,110 @@ function Recipe(value)
         end,
 
         -- Change Category of a recipe
-        -- @param categry string
-        changeCategory = function(new_category)
-            if not new_category then
+        -- @param category string
+        changeCategory = function(newCategory)
+            if not newCategory then
                 return
             end
 
-            recipe.category = new_category
+            recipe.category = newCategory
         end,
+
+        -- Add a product or catalyst to a recipe
+        -- @param catalyst string
+        -- @param amount integer
+        -- @param catalystAmount integer
+        -- @param probability float
+        addResult = function(resultName, resultAmount, catalystAmount, resultProbability)
+            if (catalystAmount and not resultProbability) or (resultProbability and not catalystAmount) then
+                return
+            end
+            local resultType = data.raw.item[resultName] and "item"
+                    or data.raw.module[resultName] and "item"
+                    or data.raw.fluid[resultName] and "fluid"
+                    or nil
+            if not resultType then
+                return
+            end
+            if recipe.results == nil then
+                recipe.results = 
+                {
+                    {
+                        recipe.result,
+                        recipe.result_count and recipe.result_count or 1
+                    }
+                }
+                recipe.result = nil
+                recipe.result_count = nil
+            end
+            if catalystAmount then
+                
+                table.insert(recipe.results,
+                    {
+                        type = resultType,
+                        name = resultName,
+                        amount = resultAmount,
+                        catalyst_amount = catalystAmount,
+                        probability = resultProbability
+                    })
+            else
+                table.insert(recipe.results,
+                    {
+                        type = resultType,
+                        name = resultName,
+                        amount = resultAmount
+                    }
+                )
+            end
+        end,
+
+        -- Change the time of the recipe
+        -- @param multiplier float
+        multiplyTime = function(multiplier)
+            recipe.energy_required = recipe.energy_required * multiplier
+
+        end,
+
+        -- Adds an icon for the new recipe
+        -- @param icon string
+        addIcon = function(icon)
+            if data.raw.recipe[recipeName] then
+            
+                if not (data.raw.recipe[recipeName].icons and 
+                        #(data.raw.recipe[recipeName].icons) > 0) then
+                    if data.raw.recipe[recipeName].icon then
+                        data.raw.recipe[recipeName].icons = {{
+                            icon        =data.raw.recipe[recipeName].icon,
+                            icon_size   =data.raw.recipe[recipeName].icon_size,
+                            icon_mipmaps=data.raw.recipe[recipeName].icon_mipmaps,
+                        }}
+                    elseif data.raw.item[data.raw.recipe[recipeName].main_product] then
+                        data.raw.recipe[recipeName].icons = {{
+                            icon        =data.raw.item[data.raw.recipe[recipeName].main_product].icon,
+                            icon_size   =data.raw.item[data.raw.recipe[recipeName].main_product].icon_size,
+                            icon_mipmaps=data.raw.item[data.raw.recipe[recipeName].main_product].icon_mipmaps
+                        }}
+                    elseif data.raw.item[data.raw.recipe[recipeName].result] then
+                        data.raw.recipe[recipeName].icons = {{
+                            icon        =data.raw.item[data.raw.recipe[recipeName].result].icon,
+                            icon_size   =data.raw.item[data.raw.recipe[recipeName].result].icon_size,
+                            icon_mipmaps=data.raw.item[data.raw.recipe[recipeName].result].icon_mipmaps,
+                        }}
+                    elseif data.raw.recipe[recipeName].normal and
+                            data.raw.item[data.raw.recipe[recipeName].normal.result] then
+                        data.raw.recipe[recipeName].icons = {{
+                            icon        =data.raw.item[data.raw.recipe[recipeName].normal.result].icon,
+                            icon_size   =data.raw.item[data.raw.recipe[recipeName].normal.result].icon_size,
+                            icon_mipmaps=data.raw.item[data.raw.recipe[recipeName].normal.result].icon_mipmaps,
+                        }}
+                    end
+                    data.raw.recipe[recipeName].icon = nil
+                    data.raw.recipe[recipeName].icon_size = nil
+                end
+                if (data.raw.recipe[recipeName].icons ~= nil) then
+                    table.insert(data.raw.recipe[recipeName].icons, icon)
+                end
+            end
+        end
     }
 end

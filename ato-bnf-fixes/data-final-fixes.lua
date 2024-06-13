@@ -1,3 +1,5 @@
+require("integrations/catalyst-fuel-updates")
+
 
 -- Fix se-space-train cargo capacitiies to desirable value
 data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 80
@@ -25,6 +27,9 @@ Recipe("el_ALK_recipe").allowProductivity()
 Recipe("el_desulfurized_kerosene_recipe").allowProductivity()
 Recipe("el_train_fuel_diesel_recipe").allowProductivity()
 Recipe("el_train_fuel_diesel_energized_recipe").allowProductivity()
+
+-- Add Productivity to BioIndustries Intermediates
+Recipe("bi-solid-fuel").allowProductivity()
 
 -- Add Productivity to BrassTacks Intermediates
 Recipe("skyseeker-armature").allowProductivity()
@@ -88,3 +93,6 @@ Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("iron-plate", 1)
 Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("airtight-seal", 1)
 Recipe("nitrous-oxide-rocket-fuel").addIngredient("iron-plate", 1)
 Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
+
+-- Fix Category for Solid Fuel from BioIndustries
+Recipe("bi-solid-fuel").changeCategory("fuel-refinery")
