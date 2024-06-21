@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 6.21.2024
+  Features:
+    - Catalysis functinos to many additional recipes
+    - Moved many fuel-related recipes to fuel refinery
+    - Added Iron and Seals to extra Rocket Fuel Recipes
+    - Assigned SE Space Train cargo sizes to 80 Slots and 50k fluid
+    - Added Productivity to MANY recipes
+---------------------------------------------------------------------------------------------------
