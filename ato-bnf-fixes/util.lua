@@ -272,7 +272,7 @@ function Recipe(value)
         addIcon = function(icon)
             if data.raw.recipe[recipeName] then
             
-                if not (data.raw.recipe[recipeName].icons and 
+                if not (data.raw.recipe[recipeName].icons ~= nil and 
                         #(data.raw.recipe[recipeName].icons) > 0) then
                     if data.raw.recipe[recipeName].icon then
                         data.raw.recipe[recipeName].icons = {{
