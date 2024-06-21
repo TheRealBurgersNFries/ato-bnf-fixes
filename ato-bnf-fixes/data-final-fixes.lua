@@ -1,4 +1,5 @@
 require("integrations/catalyst-fuel-updates")
+require("integrations/niobium-lds.lua")
 
 
 -- Fix se-space-train cargo capacitiies to desirable value
