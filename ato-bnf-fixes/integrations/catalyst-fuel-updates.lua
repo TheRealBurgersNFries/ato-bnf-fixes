@@ -58,5 +58,6 @@ for i, recipeName in pairs(recipesToUpdate) do
                         icon_size=128,
                         scale=0.124,
                         shift={8,-8}})
+        recipe.allowProductivity();
     end
 end
