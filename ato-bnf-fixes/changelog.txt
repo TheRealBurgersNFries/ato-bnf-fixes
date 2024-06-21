@@ -7,4 +7,5 @@ Date: 6.21.2024
     - Added Iron and Seals to extra Rocket Fuel Recipes
     - Assigned SE Space Train cargo sizes to 80 Slots and 50k fluid
     - Added Productivity to MANY recipes
+    - Added LDS recipes that replace Copper with Niobium
 ---------------------------------------------------------------------------------------------------
