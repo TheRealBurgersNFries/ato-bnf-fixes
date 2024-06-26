@@ -1,6 +1,6 @@
 {
     "name": "ato-bnf-fixes",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "title": "Burgers ATO Fixes",
     "author": "BurgersNFries",
     "factorio_version": "1.1",
@@ -19,6 +19,7 @@
         "ChemistryForYou",
         "Krastorio2",
         "bzgold",
-        "Tantalite"
+        "Tantalite",
+        "bzchlorine"
     ]
 }

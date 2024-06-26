@@ -39,7 +39,7 @@ data:extend({
         },
         prerequisites = { "low-density-structure"},
         unit = {
-            count = 750,
+            count = 100,
             ingredients = {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},

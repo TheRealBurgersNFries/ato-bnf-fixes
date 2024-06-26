@@ -28,6 +28,8 @@ Recipe("el_ALK_recipe").allowProductivity()
 Recipe("el_desulfurized_kerosene_recipe").allowProductivity()
 Recipe("el_train_fuel_diesel_recipe").allowProductivity()
 Recipe("el_train_fuel_diesel_energized_recipe").allowProductivity()
+Recipe("fi_modules_base_recipe").allowProductivity()
+Recipe("fi_modules_core_recipe").allowProductivity()
 
 -- Add Productivity to BioIndustries Intermediates
 Recipe("bi-solid-fuel").allowProductivity()
@@ -69,6 +71,11 @@ Recipe("spring").allowProductivity()
 
 -- Add productivity to Chemistry4You
 Recipe("lithium-hydroxide").allowProductivity()
+Recipe("cobalt-hydroxide").allowProductivity()
+
+-- Ad Productivity to Intermediates from Salt & chlorine
+Recipe("ferric-chloride").allowProductivity()
+Recipe("ferric-chloride-hcl").allowProductivity()
 
 -- Fix Category for Fuel from 248k
 Recipe("fi_solid_1_recipe").changeCategory("fuel-refinery")
@@ -97,3 +104,4 @@ Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
 
 -- Fix Category for Solid Fuel from BioIndustries
 Recipe("bi-solid-fuel").changeCategory("fuel-refinery")
+
