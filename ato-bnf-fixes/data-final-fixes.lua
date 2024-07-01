@@ -105,3 +105,5 @@ Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
 -- Fix Category for Solid Fuel from BioIndustries
 Recipe("bi-solid-fuel").changeCategory("fuel-refinery")
 
+-- Fix K2 Laser Artillery Performance
+data.raw["electric-turret"]["kr-laser-artillery-turret"].attack_parameters.range = 10
