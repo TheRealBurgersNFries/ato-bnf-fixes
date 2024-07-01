@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 7.1.2024
+  Features:
+    - Reduced performance problems related to K2 Laser ARtillery
+    - Added productivity to more recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 6.26.2024
   Features:
