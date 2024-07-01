@@ -59,6 +59,7 @@ Recipe("advanced-processing-unit").allowProductivity()
 Recipe("multi-layer-circuit-board").allowProductivity()
 Recipe("intergrated-electronics").allowProductivity()
 Recipe("fibreglass-board").allowProductivity()
+Recipe("ferric-chloride-solution").allowProductivity()
 
 -- Add Productivity to Lasing Around Intermediates
 Recipe("tracker").allowProductivity()
@@ -72,10 +73,13 @@ Recipe("spring").allowProductivity()
 -- Add productivity to Chemistry4You
 Recipe("lithium-hydroxide").allowProductivity()
 Recipe("cobalt-hydroxide").allowProductivity()
+Recipe("soda-lime-glass").allowProductivity()
+Recipe("sodium-carbonate").allowProductivity()
 
 -- Ad Productivity to Intermediates from Salt & chlorine
 Recipe("ferric-chloride").allowProductivity()
 Recipe("ferric-chloride-hcl").allowProductivity()
+Recipe("vinyl-chloride").allowProductivity()
 
 -- Fix Category for Fuel from 248k
 Recipe("fi_solid_1_recipe").changeCategory("fuel-refinery")
@@ -105,3 +109,5 @@ Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
 -- Fix Category for Solid Fuel from BioIndustries
 Recipe("bi-solid-fuel").changeCategory("fuel-refinery")
 
+-- Fix K2 Laser Artillery Performance
+data.raw["electric-turret"]["kr-laser-artillery-turret"].attack_parameters.range = 10
