@@ -90,24 +90,49 @@ Recipe("el_train_fuel_diesel_recipe").changeCategory("fuel-refinery")
 Recipe("el_train_fuel_diesel_energized_recipe").changeCategory("fuel-refinery")
 Recipe("fi_fuel_train_crystal_recipe").changeCategory("fuel-refinery")
 
--- Add Iron plate and seal to Rocket Fuel from 248k
+-- Add Iron plate and seal to Solid Rocket Fuels
 Recipe("fi_rocket_fuel_1_recipe").addIngredient("iron-plate", 1)
 Recipe("fi_rocket_fuel_1_recipe").addIngredient("airtight-seal", 1)
 Recipe("fi_rocket_fuel_2_recipe").addIngredient("iron-plate", 1)
 Recipe("fi_rocket_fuel_2_recipe").addIngredient("airtight-seal", 1)
+Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("airtight-seal", 1)
+Recipe("nitrous-oxide-rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
+
+Recipe("se-vulcanite-rocket-fuel").addIngredient("airtight-seal", 1)
+Recipe("se-vulcanite-rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("rocket-fuel").addIngredient("airtight-seal", 1)
+Recipe("rocket-fuel").addIngredient("iron-plate", 1)
+Recipe("rocket-fuel-with-ammonia").addIngredient("airtight-seal", 1)
+Recipe("rocket-fuel-with-ammonia").addIngredient("iron-plate", 1)
 
 -- Fix Category for Rocket Fuel from Chemistry4You
 Recipe("hydrogen-peroxide-rocket-fuel").changeCategory("fuel-refinery", 1)
 Recipe("nitrous-oxide-rocket-fuel").changeCategory("fuel-refinery", 1)
 
---Add Iron plate and seal to Rocket Fuel from Chemistry4You
-Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("iron-plate", 1)
-Recipe("hydrogen-peroxide-rocket-fuel").addIngredient("airtight-seal", 1)
-Recipe("nitrous-oxide-rocket-fuel").addIngredient("iron-plate", 1)
-Recipe("nitrous-oxide-rocket-fuel").addIngredient("airtight-seal", 1)
+
 
 -- Fix Category for Solid Fuel from BioIndustries
 Recipe("bi-solid-fuel").changeCategory("fuel-refinery")
 
 -- Fix K2 Laser Artillery Performance
 data.raw["electric-turret"]["kr-laser-artillery-turret"].attack_parameters.range = 10
+
+
+-- ADd Productivity to Alloys
+Recipe("cuw").allowProductivity()
+Recipe("bismuth-glass").allowProductivity()
+Recipe("mangalloy").allowProductivity()
+Recipe("bronze-plate").allowProductivity()
+Recipe("silver-pyrometallurgi").allowProductivity()
+Recipe("inconel-718").allowProductivity()
+Recipe("zircaloy-4").allowProductivity()
+Recipe("crucible").allowProductivity()
+Recipe("sulfur-smelting").allowProductivity()
+Recipe("advanced-silicon-processing").allowProductivity()
+Recipe("tungsten-trioxide").allowProductivity()
+Recipe("tungsten-trioxide-smelting").allowProductivity()
+Recipe("sodium-diuranate-smelting").allowProductivity()
+Recipe("bob-rubber").allowProductivity()
+Recipe("bismanol").allowProductivity()
